@@ -7,11 +7,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const db = require('./config/database')
-const dbUser = process.env.DB_USER
-const dbPass = process.env.DB_PASS
-const dbName = process.env.DB_NAME
-db(`mongodb+srv://${dbUser}:${dbPass}@cluster0.31jwc.gcp.mongodb.net/${dbName}?retryWrites=true&w=majority`)
-
+const dbUser1 = process.env.DB_USER1
+const dbPass1 = process.env.DB_PASS1
+const dbName1 = process.env.DB_NAME1
+//db(`mongodb+srv://${dbUser}:${dbPass}@cluster0.31jwc.gcp.mongodb.net/${dbName}?retryWrites=true&w=majority`)
+db(`mongodb+srv://${dbUser1}:${dbPass1}@cluster0.ma571.gcp.mongodb.net/${dbName1}?retryWrites=true&w=majority`)
 var app = express();
 
 app.use(logger('dev'));
@@ -27,20 +27,48 @@ app.use('/users', usersRouter);
 const teste = require('./routes/teste')
 app.use('/teste', teste)
 
-// Rota para curso
-const curso = require('./routes/curso')
-app.use('/curso', curso)
+// Rota para cliente
+const cliente = require('./routes/cliente')
+app.use('/cliente', cliente)
+<<<<<<< HEAD
 
-// Rota para professor
-const professor = require('./routes/professor')
-app.use('/professor', professor)
+// Rota para pedido
+const pedido = require('./routes/pedido')
+app.use('/pedido', pedido)
 
-// Rota para sala-aula
-const sala_aula = require('./routes/sala_aula')
-app.use('/sala-aula', sala_aula)
+// Rota para secretaria
+const secretaria = require('./routes/secretaria')
+app.use('/secretaria', secretaria)
 
-// Rota para turma
-const turma = require('./routes/turma')
-app.use('/turma', turma)
+// Rota para pagamento
+const pagamento = require('./routes/pagamento')
+app.use('/pagamento', pagamento)
+
+// Rota para cozinha
+const cozinha = require('./routes/cozinha')
+app.use('/cozinha', cozinha)
+
+=======
+
+// Rota para pedido
+const pedido = require('./routes/pedido')
+app.use('/pedido', pedido)
+
+// Rota para secretaria
+const secretaria = require('./routes/secretaria')
+app.use('/secretaria', secretaria)
+
+// Rota para pagamento
+const pagamento = require('./routes/pagamento')
+app.use('/pagamento', pagamento)
+
+// Rota para cozinha
+const cozinha = require('./routes/cozinha')
+app.use('/cozinha', cozinha)
+
+>>>>>>> 7fec4ffed3e07a3e15cb90a22aa05701babf732d
+// Rota para confeiteiro
+const confeiteiro = require('./routes/confeiteiro')
+app.use('/confeiteiro', confeiteiro)
 
 module.exports = app;
