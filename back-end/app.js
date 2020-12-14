@@ -30,15 +30,10 @@ app.use('/teste', teste)
 // Rota para cliente
 const cliente = require('./routes/cliente')
 app.use('/cliente', cliente)
-<<<<<<< HEAD
 
 // Rota para pedido
 const pedido = require('./routes/pedido')
 app.use('/pedido', pedido)
-
-// Rota para secretaria
-const secretaria = require('./routes/secretaria')
-app.use('/secretaria', secretaria)
 
 // Rota para pagamento
 const pagamento = require('./routes/pagamento')
@@ -48,27 +43,8 @@ app.use('/pagamento', pagamento)
 const cozinha = require('./routes/cozinha')
 app.use('/cozinha', cozinha)
 
-=======
-
-// Rota para pedido
-const pedido = require('./routes/pedido')
-app.use('/pedido', pedido)
-
-// Rota para secretaria
-const secretaria = require('./routes/secretaria')
-app.use('/secretaria', secretaria)
-
-// Rota para pagamento
-const pagamento = require('./routes/pagamento')
-app.use('/pagamento', pagamento)
-
-// Rota para cozinha
-const cozinha = require('./routes/cozinha')
-app.use('/cozinha', cozinha)
-
->>>>>>> 7fec4ffed3e07a3e15cb90a22aa05701babf732d
-// Rota para confeiteiro
-const confeiteiro = require('./routes/confeiteiro')
-app.use('/confeiteiro', confeiteiro)
+// Rota para funcionario
+const funcionario = require('./routes/funcionario')
+app.use('/funcionario', funcionario)
 
 module.exports = app;

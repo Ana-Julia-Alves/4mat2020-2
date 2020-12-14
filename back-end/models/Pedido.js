@@ -1,13 +1,10 @@
 const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
-<<<<<<< HEAD
-=======
     cliente: {
         type: String,
         required: true  // Atributo obrigatório
     },
->>>>>>> 7fec4ffed3e07a3e15cb90a22aa05701babf732d
     num_pedido: {
         type: Number,
         required: true
@@ -24,11 +21,8 @@ const esquema = mongoose.Schema({
         type: String,
         required: true
     },
-<<<<<<< HEAD
     cliente:{type:mongoose.ObjectId, ref:'Cliente', required: true}
-=======
-    pedido:{type:mongoose.ObjectId, ref:'cliente', required: true}
->>>>>>> 7fec4ffed3e07a3e15cb90a22aa05701babf732d
+
 })
 
 // PARÂMETROS DO mongoose.model()

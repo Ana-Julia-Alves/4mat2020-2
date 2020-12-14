@@ -1,13 +1,21 @@
 const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
-    nome_confeiteiro: {
+    nome: {
         type: String,
         required: true  // Atributo obrigatório
     },
     formacao: {
         type: String,
         required: true
+    },
+    num_registro: {
+        type: Number,
+        required: true   
+    },
+    cargo: {
+        type: String,
+        required: true  
     },
     cpf: {
         type: Number,
@@ -35,4 +43,4 @@ const esquema = mongoose.Schema({
 // 3º -> o nome da COLEÇÃO no BD que irá receber os objetos que serão
 //       criados a partir deste model (inicial minúscula, plural do
 //       nome do model)
-module.exports = mongoose.model('Confeiteiro', esquema, 'confeiteiros')
+module.exports = mongoose.model('Funcionario', esquema, 'funcionarios')

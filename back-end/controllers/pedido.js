@@ -50,11 +50,7 @@ controller.novo = async (req, res) => {
 controller.listar = async (req, res) => {
     try {
         // find() sem parâmetros é para trazer tudo
-<<<<<<< HEAD
         let dados = await Pedido.find().populate("cliente")
-=======
-        let dados = await Pedido.find()
->>>>>>> 7fec4ffed3e07a3e15cb90a22aa05701babf732d
         res.send(dados) // Vai com status 200: OK
     }
     catch (erro) {
